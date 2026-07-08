@@ -1,0 +1,41 @@
+# Build artifacts
+*.exe
+*.dll
+*.obj
+*.pdb
+*.ilk
+*.log
+!dist/*.exe
+
+# Directories
+bin/
+obj/
+build/
+dist/
+.vs/
+.vscode/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Secrets (NEVER commit these!)
+*.pfx
+*.p12
+*.key
+*-key.pem
+secrets/
+.env
+
+# Visual Studio
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog

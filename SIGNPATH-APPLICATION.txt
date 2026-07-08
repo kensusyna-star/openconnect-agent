@@ -1,0 +1,135 @@
+═══════════════════════════════════════════════════════════════════════════
+        SIGNPATH FOUNDATION APPLICATION TEMPLATE
+═══════════════════════════════════════════════════════════════════════════
+
+Application URL: https://about.signpath.io/product/open-source
+
+──────────────────────────────────────────────────────────────────────────
+PROJECT INFORMATION
+──────────────────────────────────────────────────────────────────────────
+
+Project Name: OpenConnect Agent
+
+Publisher Name (for certificate): OpenConnect
+
+GitHub Repository: https://github.com/kensusyna-star/openconnect-agent
+
+License: MIT License (OSI-approved)
+         https://opensource.org/licenses/MIT
+
+Contact Email: kensusyna@gmail.com
+
+GitHub Username: kensusyna-star
+
+Organization/Company Name: OpenConnect
+
+──────────────────────────────────────────────────────────────────────────
+PROJECT DESCRIPTION
+──────────────────────────────────────────────────────────────────────────
+
+OpenConnect Agent is an open source Windows agent for remote monitoring
+and management (RMM). It provides secure, persistent connections between
+managed endpoints and the OpenConnect server platform. The agent enables
+IT administrators to remotely manage, monitor, and support Windows
+workstations and servers.
+
+Key features:
+- Silent installation with no user interaction
+- Persistent Windows service for reliable connections
+- WebSocket-based real-time communication
+- Screen sharing and remote control capabilities
+- Secure session management with lifetime session IDs
+- Low resource usage (<50MB RAM)
+- TLS 1.3 encryption for all communications
+
+Target users are IT administrators, managed service providers (MSPs),
+and system administrators who need reliable remote management tools.
+
+──────────────────────────────────────────────────────────────────────────
+WHY DO YOU NEED CODE SIGNING?
+──────────────────────────────────────────────────────────────────────────
+
+We need code signing to eliminate Windows SmartScreen warnings that
+prevent enterprise deployments. Our target users are IT administrators
+and MSPs who require signed executables for security compliance and
+organizational policies.
+
+Without code signing:
+- Windows SmartScreen blocks downloads with scary warnings
+- Chrome/Edge flag downloads as "uncommon" or "dangerous"
+- Enterprise security policies prevent installation
+- IT departments cannot deploy to managed workstations
+
+Code signing will:
+- Enable wider adoption of our open source RMM solution
+- Build trust with enterprise customers
+- Meet security compliance requirements
+- Eliminate barriers to deployment
+
+──────────────────────────────────────────────────────────────────────────
+TECHNICAL DETAILS
+──────────────────────────────────────────────────────────────────────────
+
+Platform: Windows 10, 11, Server 2016+
+
+File Types to Sign:
+  - EXE (OpenConnectAgent.exe, installers)
+  - MSI (if we create MSI installers)
+
+Build System: GitHub Actions with automated releases
+
+Release Frequency: Monthly or as needed for security updates
+
+Expected Downloads per Month: 100-500 initially, growing to 1,000-5,000+
+
+──────────────────────────────────────────────────────────────────────────
+CONTACT INFORMATION
+──────────────────────────────────────────────────────────────────────────
+
+Maintainer Name: kensusyna-star
+
+Email: kensusyna@gmail.com
+
+GitHub Profile: https://github.com/kensusyna-star
+
+Project Maintainer: Yes, I am the primary maintainer
+
+──────────────────────────────────────────────────────────────────────────
+ADDITIONAL INFORMATION
+──────────────────────────────────────────────────────────────────────────
+
+Open Source Commitment:
+  This project will remain open source under the MIT License.
+  The agent code is publicly auditable for security and transparency.
+  We believe open source is essential for security tools used in
+  enterprise environments.
+
+Community:
+  We welcome contributions from the community and maintain active
+  issue tracking, pull request reviews, and security vulnerability
+  reporting.
+
+Enterprise Model:
+  While the agent is open source, we offer paid managed hosting,
+  priority support, and custom features for enterprise customers.
+  This allows us to sustain development while keeping the core
+  agent freely available.
+
+═══════════════════════════════════════════════════════════════════════════
+
+NEXT STEPS:
+
+1. Go to: https://about.signpath.io/product/open-source
+
+2. Click "Apply Now" or "Request Access"
+
+3. Fill out the form with the information above
+
+4. Wait 3-5 business days for review
+
+5. Upon approval:
+   - Configure GitHub secrets (SIGNPATH_API_TOKEN, SIGNPATH_ORG_ID)
+   - Push a git tag to trigger first signed release
+   - Celebrate FREE code signing! 🎉
+
+═══════════════════════════════════════════════════════════════════════════

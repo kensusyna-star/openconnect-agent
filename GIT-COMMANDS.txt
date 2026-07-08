@@ -1,0 +1,84 @@
+═══════════════════════════════════════════════════════════════════════════
+        GIT COMMANDS TO PUSH TO GITHUB
+═══════════════════════════════════════════════════════════════════════════
+
+STEP 1: Create GitHub Repository
+────────────────────────────────────────────────────────────────────────────
+
+1. Go to: https://github.com/new
+
+2. Repository name: openconnect-agent
+
+3. Visibility: PUBLIC (required for free signing!)
+
+4. DO NOT initialize with README (we have one already)
+
+5. Click "Create repository"
+
+
+STEP 2: Push Your Code
+────────────────────────────────────────────────────────────────────────────
+
+Open PowerShell in this directory and run:
+
+cd "d:\Wolf Connect\openconnect-agent-repo"
+git init
+git add .
+git commit -m "Initial commit - OpenConnect Agent for free SignPath signing"
+git branch -M main
+git remote add origin https://github.com/kensusyna-star/openconnect-agent.git
+git push -u origin main
+
+
+STEP 3: Verify Upload
+────────────────────────────────────────────────────────────────────────────
+
+Visit: https://github.com/kensusyna-star/openconnect-agent
+
+You should see:
+✓ LICENSE
+✓ README.md
+✓ .gitignore
+✓ docs/ folder
+✓ .github/workflows/ folder
+✓ SIGNPATH-APPLICATION.txt
+
+
+STEP 4: Add Your Agent Source Code
+────────────────────────────────────────────────────────────────────────────
+
+IMPORTANT: ONLY add agent source code!
+
+DO NOT add:
+  ❌ Backend server code (enterprise-server.js)
+  ❌ Dashboard HTML files
+  ❌ Magic link generation scripts
+  ❌ Database code
+  ❌ Billing/licensing code
+
+DO add:
+  ✅ Windows agent source code
+  ✅ Installation scripts
+  ✅ Build files
+  ✅ Documentation
+
+
+STEP 5: Apply for SignPath
+────────────────────────────────────────────────────────────────────────────
+
+1. Visit: https://about.signpath.io/product/open-source
+
+2. Fill out form using SIGNPATH-APPLICATION.txt template
+
+3. Wait 3-5 business days for approval
+
+4. Upon approval, configure GitHub secrets:
+   - SIGNPATH_API_TOKEN
+   - SIGNPATH_ORG_ID
+
+5. Push git tag to trigger first signed release:
+   git tag v1.0.0
+   git push origin v1.0.0
+
+
+═══════════════════════════════════════════════════════════════════════════
