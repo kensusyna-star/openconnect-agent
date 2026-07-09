@@ -1,0 +1,35 @@
+{
+  "name": "openconnect-agent",
+  "version": "1.0.0",
+  "description": "Open source Windows agent for remote monitoring and management (RMM). Silent installation, persistent service, WebSocket communication, screen sharing, and remote control.",
+  "main": "src/agent.js",
+  "scripts": {
+    "start": "node src/agent.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rmm",
+    "remote",
+    "monitoring",
+    "windows",
+    "agent",
+    "openconnect"
+  ],
+  "author": "OpenConnect",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kensusyna-star/openconnect-agent.git"
+  },
+  "homepage": "https://github.com/kensusyna-star/openconnect-agent",
+  "bugs": {
+    "url": "https://github.com/kensusyna-star/openconnect-agent/issues",
+    "email": "kensusyna@gmail.com"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "ws": "^8.14.2"
+  }
+}
