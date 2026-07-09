@@ -1,0 +1,48 @@
+name: Build and Sign Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-sign:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Setup build environment
+      run: |
+        Write-Host "Setting up build environment..."
+    
+    - name: Build OpenConnect Agent
+      run: |
+        Write-Host "Building OpenConnectAgent.exe..."
+        # Add your build commands here
+    
+    - name: Submit to SignPath for signing
+      uses: signpath/github-action-submit-signing-request@v1
+      with:
+        api-token: ${{ secrets.SIGNPATH_API_TOKEN }}
+        organization-id: ${{ secrets.SIGNPATH_ORG_ID }}
+        project-slug: 'openconnect-agent'
+        signing-policy-slug: 'release-signing'
+        artifact-configuration-slug: 'windows-exe'
+        input-artifact-path: 'dist/OpenConnectAgent.exe'
+        output-artifact-path: 'dist/OpenConnectAgent-signed.exe'
+    
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          dist/OpenConnectAgent-signed.exe
+          installer/install.ps1
+        body: |
+          ## OpenConnect Agent Release
+          
+          ### Installation
+          Download OpenConnectAgent-signed.exe and run with your session ID.
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
